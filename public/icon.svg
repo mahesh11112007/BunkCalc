@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- App badge background (dark navy) -->
+  <rect width="512" height="512" rx="112" fill="#22283a"/>
+
+  <!-- Calendar body (ivory/paper) -->
+  <rect x="72" y="140" width="368" height="300" rx="22" fill="#e6dfc4"/>
+
+  <!-- Calendar header bar (steel blue) -->
+  <rect x="72" y="140" width="368" height="86" rx="22" fill="#3b5680"/>
+  <rect x="72" y="196" width="368" height="30" fill="#3b5680"/>
+
+  <!-- Calendar ring pegs -->
+  <rect x="166" y="96" width="30" height="84" rx="15" fill="#4a5568"/>
+  <rect x="316" y="96" width="30" height="84" rx="15" fill="#4a5568"/>
+
+  <!-- Peg highlight dots -->
+  <circle cx="181" cy="140" r="9" fill="#aac4e8" opacity="0.6"/>
+  <circle cx="331" cy="140" r="9" fill="#aac4e8" opacity="0.6"/>
+
+  <!-- "BC" monogram in header -->
+  <text x="256" y="185" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle" opacity="0.9">BC</text>
+
+  <!-- Percentage sign (large, centered in body) -->
+  <text x="256" y="365" font-family="Georgia, serif" font-size="130" font-weight="bold" fill="#3b5680" text-anchor="middle" opacity="0.25">%</text>
+
+  <!-- Green bold checkmark overlay -->
+  <path d="M152 310 L220 386 L362 232" stroke="#2f6b4f" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M152 310 L220 386 L362 232" stroke="#4aad7a" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

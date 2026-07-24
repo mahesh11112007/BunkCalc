@@ -1,0 +1,17 @@
+{
+  "short_name": "BunkCalc",
+  "name": "BunkCalc – Know Your Bunks, Plan Your Leaves",
+  "description": "Track attendance, calculate safe bunk days and catch-up classes needed to hit 75%.",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#e6dfc4",
+  "theme_color": "#22283a",
+  "display": "standalone",
+  "orientation": "portrait"
+}
