@@ -1085,6 +1085,20 @@ export default function App() {
     // ==========================================
     // RENDER MAIN APPLICATION INTERFACE
     // ==========================================
+    // Show loading state while data is being fetched
+    if (currentUser && !isLoaded) {
+        return (
+            <div className="reg-root login-container">
+                <style>{styles}</style>
+                <div className="auth-box card" style={{ textAlign: 'center', padding: '40px' }}>
+                    <div style={{ fontSize: 40, marginBottom: 16 }}>⏳</div>
+                    <h2 className="reg-title" style={{ marginBottom: 8 }}>Loading Your Ledger...</h2>
+                    <p className="reg-sub">Fetching attendance data from cloud & local storage</p>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="reg-root">
             <style>{styles}</style>
