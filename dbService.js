@@ -193,6 +193,7 @@ export const dbService = {
 
   // Fetch User Data (Tries Cloud API first, falls back to Local DB)
   getUserData: async (rollNo) => {
+    if (!rollNo) return null;
     const formattedRoll = rollNo.trim().toUpperCase();
     try {
       const res = await fetch(`/api/sync?rollNo=${encodeURIComponent(formattedRoll)}`);

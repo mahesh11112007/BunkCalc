@@ -1093,7 +1093,7 @@ export default function App() {
                 <div className="auth-box card" style={{ textAlign: 'center', padding: '40px' }}>
                     <div style={{ fontSize: 40, marginBottom: 16 }}>⏳</div>
                     <h2 className="reg-title" style={{ marginBottom: 8 }}>Loading Your Ledger...</h2>
-                    <p className="reg-sub">Fetching attendance data from cloud & local storage</p>
+                    <p className="reg-sub">Fetching attendance data</p>
                 </div>
             </div>
         );

@@ -64,14 +64,14 @@ export default async function handler(req, res) {
       let updated;
       if (pinToSet) {
         updated = await sql`
-          UPDATE users 
+          UPDATE users
           SET name = ${name}, email = ${email || ''}, college_name = ${collegeName || ''}, program = ${program || ''}, pin = ${pinToSet}
           WHERE roll_no = ${formattedRoll}
           RETURNING roll_no, name, email, college_name, program, target_threshold;
         `;
       } else {
         updated = await sql`
-          UPDATE users 
+          UPDATE users
           SET name = ${name}, email = ${email || ''}, college_name = ${collegeName || ''}, program = ${program || ''}
           WHERE roll_no = ${formattedRoll}
           RETURNING roll_no, name, email, college_name, program, target_threshold;
