@@ -302,6 +302,7 @@ export default function App() {
     // Attendance App State (for logged-in user)
     const [calendar, setCalendar] = useState(DEFAULT_CALENDAR);
     const [attendance, setAttendance] = useState({});
+    const [subjects, setSubjects] = useState([]);
     const [customHolidays, setCustomHolidays] = useState([
         { date: "2026-07-24", name: "" }
     ]);
@@ -452,6 +453,7 @@ export default function App() {
         if (data) {
             if (data.calendar) setCalendar(data.calendar);
             if (data.attendance) setAttendance(data.attendance);
+            if (data.subjects) setSubjects(data.subjects);
             if (data.customHolidays) setCustomHolidays(data.customHolidays);
             if (data.targetThreshold) setTargetThreshold(data.targetThreshold);
         }
@@ -465,6 +467,7 @@ export default function App() {
             profile: currentUser,
             calendar,
             attendance,
+            subjects: [],
             customHolidays,
             targetThreshold
         });
@@ -474,7 +477,7 @@ export default function App() {
         if (currentUser && isLoaded) {
             persistUserData();
         }
-    }, [calendar, attendance, customHolidays, targetThreshold, currentUser, isLoaded]);
+    }, [calendar, attendance, subjects, customHolidays, targetThreshold, currentUser, isLoaded]);
 
     function addCustomHoliday(dateStr, reason) {
         if (!dateStr || !reason) return;
