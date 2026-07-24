@@ -25,6 +25,7 @@ export const localStorageDb = {
 export const dbService = {
   // Login Handler (Tries Cloud API first, falls back to Local DB)
   login: async (rollNo, pin) => {
+    if (!rollNo || !pin) return { success: false, error: "Roll Number and PIN are required." };
     const formattedRoll = rollNo.trim().toUpperCase();
     try {
       const res = await fetch('/api/auth', {
@@ -56,6 +57,7 @@ export const dbService = {
 
   // Signup Handler (Tries Cloud API first, falls back to Local DB)
   signup: async (userObj) => {
+    if (!userObj || !userObj.rollNo) return { success: false, error: "User data and Roll Number are required." };
     const formattedRoll = userObj.rollNo.trim().toUpperCase();
     try {
       const res = await fetch('/api/auth', {
@@ -101,6 +103,7 @@ export const dbService = {
 
   // Update Profile Handler (Name, Email, College, Branch, PIN)
   updateProfile: async (rollNo, profilePayload) => {
+    if (!rollNo) return { success: false, error: "Roll Number is required." };
     const formattedRoll = rollNo.trim().toUpperCase();
     try {
       const res = await fetch('/api/auth', {
@@ -231,6 +234,7 @@ export const dbService = {
 
   // Save User Data (Saves to both Cloud API & Local DB for maximum resilience)
   saveUserData: async (rollNo, dataPayload) => {
+    if (!rollNo) return;
     const formattedRoll = rollNo.trim().toUpperCase();
     
     // Save to Local DB always
